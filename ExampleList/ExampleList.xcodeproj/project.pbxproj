@@ -13,6 +13,7 @@
 		73F08EAE2AFDFD9700A2D12C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73F08EAD2AFDFD9700A2D12C /* Assets.xcassets */; };
 		73F08EB12AFDFD9700A2D12C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F08EAF2AFDFD9700A2D12C /* LaunchScreen.storyboard */; };
 		73F08EB92AFDFDFD00A2D12C /* ExampleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08EB82AFDFDFD00A2D12C /* ExampleListVC.swift */; };
+		73F08EBB2AFE003A00A2D12C /* ExampleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08EBA2AFE003A00A2D12C /* ExampleListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		73F08EB02AFDFD9700A2D12C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73F08EB22AFDFD9700A2D12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73F08EB82AFDFDFD00A2D12C /* ExampleListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListVC.swift; sourceTree = "<group>"; };
+		73F08EBA2AFE003A00A2D12C /* ExampleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				73F08EA42AFDFD9600A2D12C /* AppDelegate.swift */,
 				73F08EA62AFDFD9600A2D12C /* SceneDelegate.swift */,
 				73F08EB82AFDFDFD00A2D12C /* ExampleListVC.swift */,
+				73F08EBA2AFE003A00A2D12C /* ExampleListCell.swift */,
 				73F08EAA2AFDFD9600A2D12C /* Main.storyboard */,
 				73F08EAD2AFDFD9700A2D12C /* Assets.xcassets */,
 				73F08EAF2AFDFD9700A2D12C /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73F08EBB2AFE003A00A2D12C /* ExampleListCell.swift in Sources */,
 				73F08EB92AFDFDFD00A2D12C /* ExampleListVC.swift in Sources */,
 				73F08EA52AFDFD9600A2D12C /* AppDelegate.swift in Sources */,
 				73F08EA72AFDFD9600A2D12C /* SceneDelegate.swift in Sources */,
