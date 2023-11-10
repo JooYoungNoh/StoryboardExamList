@@ -11,6 +11,8 @@ class ExampleListVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private var examList: [String] = ["InteractionExamVC"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Example List"
@@ -19,16 +21,23 @@ class ExampleListVC: UIViewController {
     }
 }
 
-extension ExampleListVC: UITableViewDataSource, UITableViewDelegate {
+extension ExampleListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: ExampleListCell = tableView.dequeueReusableCell(withIdentifier: ExampleListCell.identifier, for: indexPath) as? ExampleListCell else { return UITableViewCell() }
         
-        cell.titleLabel.text = "실험중"
+        cell.titleLabel.text = self.examList[indexPath.row]
         
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.examList.count
     }
-    
+}
+
+extension ExampleListVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let nv = self.storyboard?.instantiateViewController(withIdentifier: self.examList[indexPath.row]) else { return }
+        
+        self.navigationController?.pushViewController(nv, animated: true)
+    }
 }

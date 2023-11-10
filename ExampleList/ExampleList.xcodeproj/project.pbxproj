@@ -14,6 +14,7 @@
 		73F08EB12AFDFD9700A2D12C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F08EAF2AFDFD9700A2D12C /* LaunchScreen.storyboard */; };
 		73F08EB92AFDFDFD00A2D12C /* ExampleListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08EB82AFDFDFD00A2D12C /* ExampleListVC.swift */; };
 		73F08EBB2AFE003A00A2D12C /* ExampleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08EBA2AFE003A00A2D12C /* ExampleListCell.swift */; };
+		73F08EBE2AFE07F300A2D12C /* InteractionExamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08EBD2AFE07F300A2D12C /* InteractionExamVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		73F08EB22AFDFD9700A2D12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73F08EB82AFDFDFD00A2D12C /* ExampleListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListVC.swift; sourceTree = "<group>"; };
 		73F08EBA2AFE003A00A2D12C /* ExampleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleListCell.swift; sourceTree = "<group>"; };
+		73F08EBD2AFE07F300A2D12C /* InteractionExamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionExamVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +64,21 @@
 				73F08EA62AFDFD9600A2D12C /* SceneDelegate.swift */,
 				73F08EB82AFDFDFD00A2D12C /* ExampleListVC.swift */,
 				73F08EBA2AFE003A00A2D12C /* ExampleListCell.swift */,
+				73F08EBC2AFE07D400A2D12C /* 2023_11_10 */,
 				73F08EAA2AFDFD9600A2D12C /* Main.storyboard */,
 				73F08EAD2AFDFD9700A2D12C /* Assets.xcassets */,
 				73F08EAF2AFDFD9700A2D12C /* LaunchScreen.storyboard */,
 				73F08EB22AFDFD9700A2D12C /* Info.plist */,
 			);
 			path = ExampleList;
+			sourceTree = "<group>";
+		};
+		73F08EBC2AFE07D400A2D12C /* 2023_11_10 */ = {
+			isa = PBXGroup;
+			children = (
+				73F08EBD2AFE07F300A2D12C /* InteractionExamVC.swift */,
+			);
+			path = 2023_11_10;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73F08EBE2AFE07F300A2D12C /* InteractionExamVC.swift in Sources */,
 				73F08EBB2AFE003A00A2D12C /* ExampleListCell.swift in Sources */,
 				73F08EB92AFDFDFD00A2D12C /* ExampleListVC.swift in Sources */,
 				73F08EA52AFDFD9600A2D12C /* AppDelegate.swift in Sources */,
