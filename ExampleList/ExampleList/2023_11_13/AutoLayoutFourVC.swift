@@ -16,8 +16,14 @@ class AutoLayoutFourVC: UIViewController {
     
     var viewModel: CountViewModel = CountViewModel()
     
-    var count: Int?
     var disposalbleBag = Set<AnyCancellable>()
+    
+    @IBAction func buttonOneClick(_ sender: UIButton){
+        guard let nv = self.storyboard?.instantiateViewController(withIdentifier: "AutoLayoutOneVC") as? AutoLayoutOneVC else { return }
+        nv.viewModel = self.viewModel
+        
+        self.navigationController?.pushViewController(nv, animated: true)
+    }
     
     @IBAction func buttonClick(_ sender: UIButton) {
         self.viewModel.count += 1
@@ -26,8 +32,7 @@ class AutoLayoutFourVC: UIViewController {
     func setBinding(){
         print("setBinding")
         self.viewModel.$count.sink{ (updatedList : Int) in
-            self.count = updatedList
-            self.countLabel.text = "\(self.count ?? -1)"
+            self.countLabel.text = "\(updatedList)"
         }.store(in: &disposalbleBag)
     }
 
