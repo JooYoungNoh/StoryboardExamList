@@ -8,11 +8,22 @@
 import UIKit
 
 class AutoLayoutThreeVC: UIViewController {
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.imageView.layer.cornerRadius = 10
+        self.textField.layer.cornerRadius = 10
+        self.button1.layer.cornerRadius = 10
+        self.button2.layer.cornerRadius = 10
+        self.button3.layer.cornerRadius = 10
     }
     
 
