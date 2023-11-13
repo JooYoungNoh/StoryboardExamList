@@ -472,6 +472,36 @@
             </objects>
             <point key="canvasLocation" x="3888" y="-913"/>
         </scene>
+        <!--Auto Layout FiveVC-->
+        <scene sceneID="rqC-qB-hFy">
+            <objects>
+                <viewController storyboardIdentifier="AutoLayoutFiveVC" id="X8L-Yq-7JG" customClass="AutoLayoutFiveVC" customModule="ExampleList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="goh-2P-I07">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Kbh-LK-tjG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erz-FS-dPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4579" y="-913"/>
+        </scene>
+        <!--Auto Layout SixVC-->
+        <scene sceneID="omH-r4-Ouy">
+            <objects>
+                <viewController storyboardIdentifier="AutoLayoutSixVC" id="09g-nF-Cl1" customClass="AutoLayoutSixVC" customModule="ExampleList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KWV-OK-wlq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SP8-t3-op5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q92-lp-0Mw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5262" y="-913"/>
+        </scene>
         <!--Example ListVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
