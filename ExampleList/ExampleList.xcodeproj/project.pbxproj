@@ -13,6 +13,8 @@
 		73A1F96F2B01DE7C00D82CB8 /* AutoLayoutFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1F96E2B01DE7C00D82CB8 /* AutoLayoutFourVC.swift */; };
 		73A1F9722B02035F00D82CB8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 73A1F9712B02035F00D82CB8 /* SnapKit */; };
 		73A1F9742B02035F00D82CB8 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 73A1F9732B02035F00D82CB8 /* SnapKit-Dynamic */; };
+		73A1F9762B02072D00D82CB8 /* AutoLayoutFiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1F9752B02072D00D82CB8 /* AutoLayoutFiveVC.swift */; };
+		73A1F9782B02073D00D82CB8 /* AutoLayoutSixVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1F9772B02073D00D82CB8 /* AutoLayoutSixVC.swift */; };
 		73F08EA52AFDFD9600A2D12C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08EA42AFDFD9600A2D12C /* AppDelegate.swift */; };
 		73F08EA72AFDFD9600A2D12C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F08EA62AFDFD9600A2D12C /* SceneDelegate.swift */; };
 		73F08EAC2AFDFD9600A2D12C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F08EAA2AFDFD9600A2D12C /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		73A1F96A2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutTwoVC.swift; sourceTree = "<group>"; };
 		73A1F96C2B01DE4F00D82CB8 /* AutoLayoutThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutThreeVC.swift; sourceTree = "<group>"; };
 		73A1F96E2B01DE7C00D82CB8 /* AutoLayoutFourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutFourVC.swift; sourceTree = "<group>"; };
+		73A1F9752B02072D00D82CB8 /* AutoLayoutFiveVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutFiveVC.swift; sourceTree = "<group>"; };
+		73A1F9772B02073D00D82CB8 /* AutoLayoutSixVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutSixVC.swift; sourceTree = "<group>"; };
 		73F08EA12AFDFD9600A2D12C /* ExampleList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F08EA42AFDFD9600A2D12C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73F08EA62AFDFD9600A2D12C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				73A1F96A2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift */,
 				73A1F96C2B01DE4F00D82CB8 /* AutoLayoutThreeVC.swift */,
 				73A1F96E2B01DE7C00D82CB8 /* AutoLayoutFourVC.swift */,
+				73A1F9752B02072D00D82CB8 /* AutoLayoutFiveVC.swift */,
+				73A1F9772B02073D00D82CB8 /* AutoLayoutSixVC.swift */,
 			);
 			path = 2023_11_13;
 			sourceTree = "<group>";
@@ -191,7 +197,9 @@
 				73F08EB92AFDFDFD00A2D12C /* ExampleListVC.swift in Sources */,
 				73F08EA52AFDFD9600A2D12C /* AppDelegate.swift in Sources */,
 				73A1F96F2B01DE7C00D82CB8 /* AutoLayoutFourVC.swift in Sources */,
+				73A1F9782B02073D00D82CB8 /* AutoLayoutSixVC.swift in Sources */,
 				73F08EA72AFDFD9600A2D12C /* SceneDelegate.swift in Sources */,
+				73A1F9762B02072D00D82CB8 /* AutoLayoutFiveVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
