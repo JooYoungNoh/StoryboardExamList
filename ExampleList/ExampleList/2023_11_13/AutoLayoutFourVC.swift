@@ -6,24 +6,42 @@
 //
 
 import UIKit
+import Combine
 
 class AutoLayoutFourVC: UIViewController {
+    
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var countLabel: UILabel!
+    
+    var viewModel: CountViewModel = CountViewModel()
+    
+    var count: Int?
+    var disposalbleBag = Set<AnyCancellable>()
+    
+    @IBAction func buttonClick(_ sender: UIButton) {
+        self.viewModel.count += 1
+    }
+    
+    func setBinding(){
+        print("setBinding")
+        self.viewModel.$count.sink{ (updatedList : Int) in
+            self.count = updatedList
+            self.countLabel.text = "\(self.count ?? -1)"
+        }.store(in: &disposalbleBag)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.button1.layer.cornerRadius = 10
+        self.button3.layer.cornerRadius = 10
+        
+        setBinding()
     }
-    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+class CountViewModel: ObservableObject {
+    @Published var count: Int = 0
 }
