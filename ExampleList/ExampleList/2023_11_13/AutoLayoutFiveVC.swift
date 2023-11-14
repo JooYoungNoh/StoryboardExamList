@@ -11,9 +11,6 @@ import SnapKit
 
 class AutoLayoutFiveVC: UIViewController {
     
-    var viewModel = HeightViewModel()
-    var disposalbleBag = Set<AnyCancellable>()
-    
     let redView: UIView = {
         let view = UIView()
         view.backgroundColor = .red
@@ -58,33 +55,23 @@ class AutoLayoutFiveVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel.height = self.view.frame.height/3
         uiCreate()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        print(size.height/3)
-        self.viewModel.height = size.height/3
-        setBinding()
-    }
-    
-    func setBinding(){
-        print("setBinding")
-        self.viewModel.$height.sink{ (updatedList: CGFloat) in
-            self.redView.snp.removeConstraints()
-            self.redView.snp.makeConstraints { make in
-                make.top.leading.equalToSuperview()
-                make.trailing.equalTo(self.view.snp.centerX)
-                make.height.equalTo(self.viewModel.height)
-            }
-            
-            self.greenView.snp.removeConstraints()
-            self.greenView.snp.makeConstraints { make in
-                make.top.trailing.equalToSuperview()
-                make.leading.equalTo(self.view.snp.centerX)
-                make.height.equalTo(self.viewModel.height)
-            }
-        }.store(in: &disposalbleBag)
+        self.redView.snp.removeConstraints()
+        self.redView.snp.makeConstraints { make in
+            make.top.leading.equalToSuperview()
+            make.trailing.equalTo(self.view.snp.centerX)
+            make.height.equalTo(size.height/3)
+        }
+        
+        self.greenView.snp.removeConstraints()
+        self.greenView.snp.makeConstraints { make in
+            make.top.trailing.equalToSuperview()
+            make.leading.equalTo(self.view.snp.centerX)
+            make.height.equalTo(size.height/3)
+        }
     }
     
     func uiCreate() {
@@ -134,9 +121,5 @@ class AutoLayoutFiveVC: UIViewController {
             make.height.equalTo(30)
         }
     }
-}
-
-class HeightViewModel: ObservableObject {
-    @Published var height: CGFloat = 0
 }
 
