@@ -9,21 +9,21 @@ import UIKit
 
 class CrossVC: UIViewController {
 
+    @IBOutlet weak var myView: UIView!
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var myButton: UIButton!
+    
+    @IBOutlet weak var centerConstration: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        uiCreate()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func uiCreate(){
+        myView.removeConstraint(centerConstration)
+        
+        myLabel.trailingAnchor.constraint(equalTo: myButton.trailingAnchor).isActive = true
     }
-    */
 
 }
