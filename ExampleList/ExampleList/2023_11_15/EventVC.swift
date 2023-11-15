@@ -27,10 +27,6 @@ class EventVC: UIViewController {
         self.index = self.index == 5 ? 0 : self.index+1
         
         self.myImageView.image = UIImage(named: imageArr[index])
-        
-        self.myImageView.snp.makeConstraints { make in
-            make.width.height.equalTo(200)
-        }
     }
 
     @IBAction func switchToggle(_ sender: UISwitch) {
