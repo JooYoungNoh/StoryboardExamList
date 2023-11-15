@@ -11,6 +11,11 @@
 		736227052B04A71C00888A16 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736227042B04A71C00888A16 /* SecondVC.swift */; };
 		736227072B04A73000888A16 /* ThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736227062B04A73000888A16 /* ThirdVC.swift */; };
 		736227092B04A75600888A16 /* TabPracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736227082B04A75600888A16 /* TabPracticeVC.swift */; };
+		7362270B2B04B03900888A16 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7362270A2B04B03900888A16 /* CustomTabBar.swift */; };
+		7362270D2B04B1AB00888A16 /* BearVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7362270C2B04B1AB00888A16 /* BearVC.swift */; };
+		736227112B04B1D300888A16 /* ShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736227102B04B1D300888A16 /* ShowVC.swift */; };
+		736227152B04B7B400888A16 /* BearVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736227142B04B7B400888A16 /* BearVM.swift */; };
+		736227172B04B9DC00888A16 /* BearTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736227162B04B9DC00888A16 /* BearTwoVC.swift */; };
 		73823CC82B045BA9007E6A92 /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73823CC72B045BA9007E6A92 /* EventVC.swift */; };
 		73823CCA2B04815B007E6A92 /* EventTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73823CC92B04815B007E6A92 /* EventTwoVC.swift */; };
 		73823CCC2B04982F007E6A92 /* EventThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73823CCB2B04982F007E6A92 /* EventThreeVC.swift */; };
@@ -41,6 +46,11 @@
 		736227042B04A71C00888A16 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 		736227062B04A73000888A16 /* ThirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdVC.swift; sourceTree = "<group>"; };
 		736227082B04A75600888A16 /* TabPracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPracticeVC.swift; sourceTree = "<group>"; };
+		7362270A2B04B03900888A16 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		7362270C2B04B1AB00888A16 /* BearVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearVC.swift; sourceTree = "<group>"; };
+		736227102B04B1D300888A16 /* ShowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowVC.swift; sourceTree = "<group>"; };
+		736227142B04B7B400888A16 /* BearVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearVM.swift; sourceTree = "<group>"; };
+		736227162B04B9DC00888A16 /* BearTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearTwoVC.swift; sourceTree = "<group>"; };
 		73823CC72B045BA9007E6A92 /* EventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
 		73823CC92B04815B007E6A92 /* EventTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTwoVC.swift; sourceTree = "<group>"; };
 		73823CCB2B04982F007E6A92 /* EventThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventThreeVC.swift; sourceTree = "<group>"; };
@@ -90,6 +100,11 @@
 				736227022B04A71000888A16 /* FirstVC.swift */,
 				736227042B04A71C00888A16 /* SecondVC.swift */,
 				736227062B04A73000888A16 /* ThirdVC.swift */,
+				7362270A2B04B03900888A16 /* CustomTabBar.swift */,
+				7362270C2B04B1AB00888A16 /* BearVC.swift */,
+				736227162B04B9DC00888A16 /* BearTwoVC.swift */,
+				736227102B04B1D300888A16 /* ShowVC.swift */,
+				736227142B04B7B400888A16 /* BearVM.swift */,
 			);
 			path = 2023_11_15;
 			sourceTree = "<group>";
@@ -243,9 +258,11 @@
 				73A1F9692B01DDE600D82CB8 /* AutoLayoutOneVC.swift in Sources */,
 				73A1F96B2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift in Sources */,
 				736227072B04A73000888A16 /* ThirdVC.swift in Sources */,
+				736227112B04B1D300888A16 /* ShowVC.swift in Sources */,
 				73823CCA2B04815B007E6A92 /* EventTwoVC.swift in Sources */,
 				73823CCE2B049940007E6A92 /* EventFourVC.swift in Sources */,
 				736227052B04A71C00888A16 /* SecondVC.swift in Sources */,
+				7362270D2B04B1AB00888A16 /* BearVC.swift in Sources */,
 				73A1F96D2B01DE4F00D82CB8 /* AutoLayoutThreeVC.swift in Sources */,
 				73FB30A32B03134E0069837B /* CrossVC.swift in Sources */,
 				73F08EBE2AFE07F300A2D12C /* InteractionExamVC.swift in Sources */,
@@ -253,10 +270,13 @@
 				73F08EB92AFDFDFD00A2D12C /* ExampleListVC.swift in Sources */,
 				73F08EA52AFDFD9600A2D12C /* AppDelegate.swift in Sources */,
 				73A1F96F2B01DE7C00D82CB8 /* AutoLayoutFourVC.swift in Sources */,
+				736227172B04B9DC00888A16 /* BearTwoVC.swift in Sources */,
 				736227092B04A75600888A16 /* TabPracticeVC.swift in Sources */,
 				73A1F9782B02073D00D82CB8 /* AutoLayoutSixVC.swift in Sources */,
 				73F08EA72AFDFD9600A2D12C /* SceneDelegate.swift in Sources */,
+				7362270B2B04B03900888A16 /* CustomTabBar.swift in Sources */,
 				736227032B04A71000888A16 /* FirstVC.swift in Sources */,
+				736227152B04B7B400888A16 /* BearVM.swift in Sources */,
 				73823CC82B045BA9007E6A92 /* EventVC.swift in Sources */,
 				73A1F9762B02072D00D82CB8 /* AutoLayoutFiveVC.swift in Sources */,
 				73823CCC2B04982F007E6A92 /* EventThreeVC.swift in Sources */,

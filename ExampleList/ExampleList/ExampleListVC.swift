@@ -11,7 +11,7 @@ class ExampleListVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var examList: [String] = ["InteractionExamVC", "AutoLayoutOneVC", "AutoLayoutTwoVC", "AutoLayoutThreeVC", "AutoLayoutFourVC", "AutoLayoutFiveVC", "AutoLayoutSixVC", "CrossVC", "EventVC", "TabPracticeVC"]
+    private var examList: [String] = ["InteractionExamVC", "AutoLayoutOneVC", "AutoLayoutTwoVC", "AutoLayoutThreeVC", "AutoLayoutFourVC", "AutoLayoutFiveVC", "AutoLayoutSixVC", "CrossVC", "EventVC", "TabPracticeVC", "CustomTabBar"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +36,12 @@ extension ExampleListVC: UITableViewDataSource {
 
 extension ExampleListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let nv = self.storyboard?.instantiateViewController(withIdentifier: self.examList[indexPath.row]) else { return }
-        
-        self.navigationController?.pushViewController(nv, animated: true)
+        if self.examList[indexPath.row] == "CustomTabBar" {
+            self.navigationController?.pushViewController(CustomTabBar(), animated: true)
+        } else {
+            guard let nv = self.storyboard?.instantiateViewController(withIdentifier: self.examList[indexPath.row]) else { return }
+            
+            self.navigationController?.pushViewController(nv, animated: true)
+        }
     }
 }
