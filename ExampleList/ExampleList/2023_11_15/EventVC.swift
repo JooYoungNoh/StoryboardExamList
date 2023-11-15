@@ -15,7 +15,7 @@ class EventVC: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var mySwitch: UISwitch!
     
-    private let imageArr: [String] = ["blueGlass", "cuteGlass", "fallGlass", "prettyGlass", "showGlass", "whiteGlass"]
+    private let imageArr: [String] = ["blueGlass", "cuteGlass", "fallGlass", "prettyGlass", "showGlass", "whiteGlass", "bearGlass", "brownGlass", "dinosaurGlass", "doctorGlass", "friendGlass", "glassesGlass", "sparkleGlass", "strawberryGlass"]
     private var index: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class EventVC: UIViewController {
     }
     
     @IBAction func buttonClick(_ sender: UIButton) {
-        self.index = self.index == 5 ? 0 : self.index+1
+        self.index = self.index == 13 ? 0 : self.index+1
         
         self.myImageView.image = UIImage(named: imageArr[index])
     }
