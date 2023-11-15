@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		73823CC82B045BA9007E6A92 /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73823CC72B045BA9007E6A92 /* EventVC.swift */; };
+		73823CCA2B04815B007E6A92 /* EventTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73823CC92B04815B007E6A92 /* EventTwoVC.swift */; };
 		73A1F9692B01DDE600D82CB8 /* AutoLayoutOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1F9682B01DDE600D82CB8 /* AutoLayoutOneVC.swift */; };
 		73A1F96B2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1F96A2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift */; };
 		73A1F96D2B01DE4F00D82CB8 /* AutoLayoutThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1F96C2B01DE4F00D82CB8 /* AutoLayoutThreeVC.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		73823CC72B045BA9007E6A92 /* EventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
+		73823CC92B04815B007E6A92 /* EventTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTwoVC.swift; sourceTree = "<group>"; };
 		73A1F9682B01DDE600D82CB8 /* AutoLayoutOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutOneVC.swift; sourceTree = "<group>"; };
 		73A1F96A2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutTwoVC.swift; sourceTree = "<group>"; };
 		73A1F96C2B01DE4F00D82CB8 /* AutoLayoutThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutThreeVC.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				73823CC72B045BA9007E6A92 /* EventVC.swift */,
+				73823CC92B04815B007E6A92 /* EventTwoVC.swift */,
 			);
 			path = 2023_11_15;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			files = (
 				73A1F9692B01DDE600D82CB8 /* AutoLayoutOneVC.swift in Sources */,
 				73A1F96B2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift in Sources */,
+				73823CCA2B04815B007E6A92 /* EventTwoVC.swift in Sources */,
 				73A1F96D2B01DE4F00D82CB8 /* AutoLayoutThreeVC.swift in Sources */,
 				73FB30A32B03134E0069837B /* CrossVC.swift in Sources */,
 				73F08EBE2AFE07F300A2D12C /* InteractionExamVC.swift in Sources */,

@@ -12,6 +12,7 @@ class EventVC: UIViewController {
     
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var myButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var mySwitch: UISwitch!
     
     private let imageArr: [String] = ["blueGlass", "cuteGlass", "fallGlass", "prettyGlass", "showGlass", "whiteGlass"]
@@ -19,6 +20,7 @@ class EventVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        uiCreate()
         self.myButton.layer.cornerRadius = 20
         self.myImageView.image = UIImage(named: imageArr[0])
     }
@@ -40,5 +42,24 @@ class EventVC: UIViewController {
                 make.width.height.equalTo(100)
             }
         }
+    }
+    
+    @IBAction func unwindToVC(_ sender: UIStoryboardSegue) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    func uiCreate() {
+        
+        self.myButton.layer.cornerRadius = 20
+        self.nextButton.layer.cornerRadius = 20
+        
+        self.myImageView.image = UIImage(named: imageArr[0])
+    }
+    
+    //네비게이션
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nextView = segue.destination as? EventTwoVC else { return }
+        nextView.dataString = imageArr[index]
+        
     }
 }
