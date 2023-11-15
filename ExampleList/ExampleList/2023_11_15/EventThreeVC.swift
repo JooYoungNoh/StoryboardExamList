@@ -1,5 +1,5 @@
 //
-//  EventTwoVC.swift
+//  EventThreeVC.swift
 //  ExampleList
 //
 //  Created by 노주영 on 2023/11/15.
@@ -7,26 +7,28 @@
 
 import UIKit
 
-class EventTwoVC: UIViewController {
-    
-    @IBOutlet weak var dataLabel: UILabel!
-    @IBOutlet weak var myImageView: UIImageView!
+class EventThreeVC: UIViewController {
+
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
-    var dataString: String = ""
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.navigationBar.isHidden = true
         self.backButton.layer.cornerRadius = 20
         self.nextButton.layer.cornerRadius = 20
-        dataLabel.text = dataString
-        myImageView.image = UIImage(named: dataString)
     }
     
-
+    @IBAction func buttonClick(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func goNext(_ sender: UIButton) {
+        guard let nextView = self.storyboard?.instantiateViewController(withIdentifier: "EventFourVC") as? EventFourVC else { return }
+        
+        self.navigationController?.pushViewController(nextView, animated: true)
+    }
     /*
     // MARK: - Navigation
 

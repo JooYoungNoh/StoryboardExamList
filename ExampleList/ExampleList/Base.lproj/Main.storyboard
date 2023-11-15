@@ -700,7 +700,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-qB-n2X">
-                                <rect key="frame" x="146.66666666666666" y="752" width="100" height="40"/>
+                                <rect key="frame" x="20" y="752" width="100" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="IB3-TU-KBP"/>
@@ -729,16 +729,32 @@
                                     <constraint firstAttribute="width" constant="200" id="jZN-X6-4Xm"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKP-HJ-jGJ">
+                                <rect key="frame" x="273" y="752" width="100" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Zwa-9f-q3e"/>
+                                    <constraint firstAttribute="width" constant="100" id="o4o-VY-SqI"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <connections>
+                                    <segue destination="ejq-YN-eRx" kind="show" id="1lN-cP-6fx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fdj-Kr-2Gx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fdj-Kr-2Gx" firstAttribute="bottom" secondItem="JKP-HJ-jGJ" secondAttribute="bottom" constant="50" id="0Pe-3I-DMd"/>
                             <constraint firstItem="ANQ-IR-PfN" firstAttribute="centerX" secondItem="AMi-rT-Cdb" secondAttribute="centerX" id="7n1-pW-KFs"/>
                             <constraint firstItem="fdj-Kr-2Gx" firstAttribute="trailing" secondItem="zMc-ES-z7k" secondAttribute="trailing" constant="20" id="8mD-Mp-J29"/>
                             <constraint firstItem="zMc-ES-z7k" firstAttribute="leading" secondItem="fdj-Kr-2Gx" secondAttribute="leading" constant="20" id="9kk-dk-rdf"/>
-                            <constraint firstItem="9Tf-qB-n2X" firstAttribute="centerX" secondItem="AMi-rT-Cdb" secondAttribute="centerX" id="JST-Al-Dlk"/>
+                            <constraint firstItem="fdj-Kr-2Gx" firstAttribute="trailing" secondItem="JKP-HJ-jGJ" secondAttribute="trailing" constant="20" id="SGH-89-Id6"/>
                             <constraint firstItem="zMc-ES-z7k" firstAttribute="top" secondItem="fdj-Kr-2Gx" secondAttribute="top" constant="20" id="VOI-QJ-FOt"/>
                             <constraint firstItem="fdj-Kr-2Gx" firstAttribute="bottom" secondItem="9Tf-qB-n2X" secondAttribute="bottom" constant="50" id="WvB-fc-VIZ"/>
+                            <constraint firstItem="9Tf-qB-n2X" firstAttribute="leading" secondItem="fdj-Kr-2Gx" secondAttribute="leading" constant="20" id="hOH-sZ-dfe"/>
                             <constraint firstItem="ANQ-IR-PfN" firstAttribute="centerY" secondItem="AMi-rT-Cdb" secondAttribute="centerY" id="pkk-kH-XQz"/>
                         </constraints>
                     </view>
@@ -747,12 +763,13 @@
                         <outlet property="backButton" destination="9Tf-qB-n2X" id="d7p-VD-ONJ"/>
                         <outlet property="dataLabel" destination="zMc-ES-z7k" id="S9C-Ge-DUI"/>
                         <outlet property="myImageView" destination="ANQ-IR-PfN" id="mDB-8M-e0U"/>
+                        <outlet property="nextButton" destination="JKP-HJ-jGJ" id="f6Z-VS-95m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ssq-et-JSP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="kUr-XR-Sf2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2708" y="554"/>
+            <point key="canvasLocation" x="2707.6335877862593" y="553.52112676056345"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lYQ-bM-lfr">
@@ -771,6 +788,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V52-Tz-Z1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="112.21374045801527" y="-2.1126760563380285"/>
+        </scene>
+        <!--EventThreeVC-->
+        <scene sceneID="jCB-AF-6GU">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="EventThreeVC" storyboardName="SubEvent" referencedIdentifier="EventThreeVC" id="ejq-YN-eRx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OBu-rQ-SPE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tEf-DH-T18" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3401" y="554"/>
         </scene>
     </scenes>
     <resources>

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		73823CC82B045BA9007E6A92 /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73823CC72B045BA9007E6A92 /* EventVC.swift */; };
 		73823CCA2B04815B007E6A92 /* EventTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73823CC92B04815B007E6A92 /* EventTwoVC.swift */; };
+		73823CCC2B04982F007E6A92 /* EventThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73823CCB2B04982F007E6A92 /* EventThreeVC.swift */; };
+		73823CCE2B049940007E6A92 /* EventFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73823CCD2B049940007E6A92 /* EventFourVC.swift */; };
+		73823CD12B0499D0007E6A92 /* SubEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73823CCF2B0499D0007E6A92 /* SubEvent.storyboard */; };
+		73823CD32B049B67007E6A92 /* SubEventTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73823CD22B049B67007E6A92 /* SubEventTwo.storyboard */; };
 		73A1F9692B01DDE600D82CB8 /* AutoLayoutOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1F9682B01DDE600D82CB8 /* AutoLayoutOneVC.swift */; };
 		73A1F96B2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1F96A2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift */; };
 		73A1F96D2B01DE4F00D82CB8 /* AutoLayoutThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1F96C2B01DE4F00D82CB8 /* AutoLayoutThreeVC.swift */; };
@@ -31,6 +35,10 @@
 /* Begin PBXFileReference section */
 		73823CC72B045BA9007E6A92 /* EventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
 		73823CC92B04815B007E6A92 /* EventTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTwoVC.swift; sourceTree = "<group>"; };
+		73823CCB2B04982F007E6A92 /* EventThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventThreeVC.swift; sourceTree = "<group>"; };
+		73823CCD2B049940007E6A92 /* EventFourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFourVC.swift; sourceTree = "<group>"; };
+		73823CD02B0499D0007E6A92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SubEvent.storyboard; sourceTree = "<group>"; };
+		73823CD22B049B67007E6A92 /* SubEventTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SubEventTwo.storyboard; sourceTree = "<group>"; };
 		73A1F9682B01DDE600D82CB8 /* AutoLayoutOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutOneVC.swift; sourceTree = "<group>"; };
 		73A1F96A2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutTwoVC.swift; sourceTree = "<group>"; };
 		73A1F96C2B01DE4F00D82CB8 /* AutoLayoutThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutThreeVC.swift; sourceTree = "<group>"; };
@@ -68,6 +76,8 @@
 			children = (
 				73823CC72B045BA9007E6A92 /* EventVC.swift */,
 				73823CC92B04815B007E6A92 /* EventTwoVC.swift */,
+				73823CCB2B04982F007E6A92 /* EventThreeVC.swift */,
+				73823CCD2B049940007E6A92 /* EventFourVC.swift */,
 			);
 			path = 2023_11_15;
 			sourceTree = "<group>";
@@ -113,6 +123,8 @@
 				73FB30A12B03131C0069837B /* 2023_11_14 */,
 				73823CC62B045B85007E6A92 /* 2023_11_15 */,
 				73F08EAA2AFDFD9600A2D12C /* Main.storyboard */,
+				73823CCF2B0499D0007E6A92 /* SubEvent.storyboard */,
+				73823CD22B049B67007E6A92 /* SubEventTwo.storyboard */,
 				73F08EAD2AFDFD9700A2D12C /* Assets.xcassets */,
 				73F08EAF2AFDFD9700A2D12C /* LaunchScreen.storyboard */,
 				73F08EB22AFDFD9700A2D12C /* Info.plist */,
@@ -203,6 +215,8 @@
 			files = (
 				73F08EB12AFDFD9700A2D12C /* LaunchScreen.storyboard in Resources */,
 				73F08EAE2AFDFD9700A2D12C /* Assets.xcassets in Resources */,
+				73823CD32B049B67007E6A92 /* SubEventTwo.storyboard in Resources */,
+				73823CD12B0499D0007E6A92 /* SubEvent.storyboard in Resources */,
 				73F08EAC2AFDFD9600A2D12C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +231,7 @@
 				73A1F9692B01DDE600D82CB8 /* AutoLayoutOneVC.swift in Sources */,
 				73A1F96B2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift in Sources */,
 				73823CCA2B04815B007E6A92 /* EventTwoVC.swift in Sources */,
+				73823CCE2B049940007E6A92 /* EventFourVC.swift in Sources */,
 				73A1F96D2B01DE4F00D82CB8 /* AutoLayoutThreeVC.swift in Sources */,
 				73FB30A32B03134E0069837B /* CrossVC.swift in Sources */,
 				73F08EBE2AFE07F300A2D12C /* InteractionExamVC.swift in Sources */,
@@ -228,12 +243,21 @@
 				73F08EA72AFDFD9600A2D12C /* SceneDelegate.swift in Sources */,
 				73823CC82B045BA9007E6A92 /* EventVC.swift in Sources */,
 				73A1F9762B02072D00D82CB8 /* AutoLayoutFiveVC.swift in Sources */,
+				73823CCC2B04982F007E6A92 /* EventThreeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		73823CCF2B0499D0007E6A92 /* SubEvent.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73823CD02B0499D0007E6A92 /* Base */,
+			);
+			name = SubEvent.storyboard;
+			sourceTree = "<group>";
+		};
 		73F08EAA2AFDFD9600A2D12C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
