@@ -7,11 +7,17 @@
 
 import UIKit
 
+struct TablePracticeModel {
+    var attractionNames: String
+    var webAddresses: String
+    var attractionImages: String
+}
+
 class TablePracticeVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var items = [["Kim", "glassesGlass"], ["Lee", "dinosaurGlass"], ["Park", "friendGlass"]]
+    var items: [TablePracticeModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +27,14 @@ class TablePracticeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = false
+    
+        self.items = [
+            TablePracticeModel(attractionNames: "Buckingham Palace", webAddresses: "https://en.wikipedia.org/wiki/Buckingham_Palace", attractionImages: "brownGlass"),
+            TablePracticeModel(attractionNames: "The Eiffel Tower", webAddresses: "https://en.wikipedia.org/wiki/Eiffel_Tower", attractionImages: "friendGlass"),
+            TablePracticeModel(attractionNames: "The Grand Canyon", webAddresses: "https://en.wikipedia.org/wiki/Grand_Canyon", attractionImages: "doctorGlass"),
+            TablePracticeModel(attractionNames: "Windsor Castle", webAddresses: "https://en.wikipedia.org/wiki/Windsor_Castle", attractionImages: "sparkleGlass"),
+            TablePracticeModel(attractionNames: "Empire State Building", webAddresses: "https://en.wikipedia.org/wiki/Empire_State_Building", attractionImages: "strawberryGlass")
+        ]
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -32,9 +46,10 @@ class TablePracticeVC: UIViewController {
 extension TablePracticeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TablePracticeCell", for: indexPath) as? TablePracticeCell else { return UITableViewCell() }
+        cell.selectionStyle = .none
         
-        cell.nameLabel.text = self.items[indexPath.row][0]
-        cell.profileImageView.image = UIImage(named: self.items[indexPath.row][1])
+        cell.nameLabel.text = self.items[indexPath.row].attractionNames
+        cell.profileImageView.image = UIImage(named: self.items[indexPath.row].attractionImages)
         cell.profileImageView.layer.cornerRadius = 20
         
         return cell
@@ -45,7 +60,8 @@ extension TablePracticeVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140    }
+        return 140 
+    }
 }
 
 extension TablePracticeVC: UITableViewDelegate {
