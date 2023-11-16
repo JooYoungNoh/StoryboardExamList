@@ -10,14 +10,18 @@ import UIKit
 struct TablePracticeModel {
     var attractionNames: String
     var webAddresses: String
-    var attractionImages: String
+    var image: UIImage
+}
+
+class TablePracticeVM {
+    var items: [TablePracticeModel] = []
 }
 
 class TablePracticeVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var items: [TablePracticeModel] = []
+    var viewModel = TablePracticeVM()
     
     //서치바
     var searching: Bool {
@@ -38,14 +42,6 @@ class TablePracticeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = false
-    
-        self.items = [
-            TablePracticeModel(attractionNames: "Buckingham Palace", webAddresses: "https://en.wikipedia.org/wiki/Buckingham_Palace", attractionImages: "brownGlass"),
-            TablePracticeModel(attractionNames: "The Eiffel Tower", webAddresses: "https://en.wikipedia.org/wiki/Eiffel_Tower", attractionImages: "friendGlass"),
-            TablePracticeModel(attractionNames: "The Grand Canyon", webAddresses: "https://en.wikipedia.org/wiki/Grand_Canyon", attractionImages: "doctorGlass"),
-            TablePracticeModel(attractionNames: "Windsor Castle", webAddresses: "https://en.wikipedia.org/wiki/Windsor_Castle", attractionImages: "sparkleGlass"),
-            TablePracticeModel(attractionNames: "Empire State Building", webAddresses: "https://en.wikipedia.org/wiki/Empire_State_Building", attractionImages: "strawberryGlass")
-        ]
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -74,8 +70,8 @@ extension TablePracticeVC: UISearchBarDelegate, UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else { return }
         self.matchArr.removeAll()
-        for index in 0..<self.items.count {
-            if self.items[index].attractionNames.lowercased().contains(text.lowercased()) {
+        for index in 0..<self.viewModel.items.count {
+            if self.viewModel.items[index].attractionNames.lowercased().contains(text.lowercased()) {
                 self.matchArr.append(index)
             }
         }
@@ -90,6 +86,8 @@ extension TablePracticeVC {
         addView.modalPresentationStyle = .overCurrentContext
         addView.modalTransitionStyle = .crossDissolve
         
+        addView.viewModel = self.viewModel
+        addView.tableView = self.tableView
         self.present(addView, animated: true)
     }
     
@@ -111,18 +109,18 @@ extension TablePracticeVC: UITableViewDataSource {
         cell.profileImageView.layer.cornerRadius = 20
         
         if self.searching {
-            cell.nameLabel.text = self.items[self.matchArr[indexPath.row]].attractionNames
-            cell.profileImageView.image = UIImage(named: self.items[self.matchArr[indexPath.row]].attractionImages)
+            cell.nameLabel.text = self.viewModel.items[self.matchArr[indexPath.row]].attractionNames
+            cell.profileImageView.image = self.viewModel.items[self.matchArr[indexPath.row]].image
         } else {
-            cell.nameLabel.text = self.items[indexPath.row].attractionNames
-            cell.profileImageView.image = UIImage(named: self.items[indexPath.row].attractionImages)
+            cell.nameLabel.text = self.viewModel.items[indexPath.row].attractionNames
+            cell.profileImageView.image = self.viewModel.items[indexPath.row].image
         }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.searching ? self.matchArr.count : self.items.count
+        return self.searching ? self.matchArr.count : self.viewModel.items.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -134,35 +132,18 @@ extension TablePracticeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let nextView = self.storyboard?.instantiateViewController(identifier: "TableDetailVC") as? TableDetailVC else { return }
         
-        nextView.webSite = self.searching ? self.items[self.matchArr[indexPath.row]].webAddresses : self.items[indexPath.row].webAddresses
+        nextView.webSite = self.searching ? self.viewModel.items[self.matchArr[indexPath.row]].webAddresses : self.viewModel.items[indexPath.row].webAddresses
         
         self.navigationController?.pushViewController(nextView, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        /*
-         if isSearching {
-                         self.matchesArray.remove(at: row)
-                         self.attractionNames.remove(at: matchesArray[row])
-                         self.attractionImages.remove(at: matchesArray[row])
-                         self.webAddresses.remove(at: matchesArray[row])
-                         self.updateSearchResults(for: searchController)
-                     } else {
-                         self.attractionNames.remove(at: row)
-                         self.attractionImages.remove(at: row)
-                         self.webAddresses.remove(at: row)
-                     }
-                     
-                     tableView.deleteRows(at: [indexPath], with: .fade)
-         */
-        
         if editingStyle == .delete {
             if self.searching {
-                let row = self.matchArr[indexPath.row]
+                self.viewModel.items.remove(at: self.matchArr[indexPath.row])
                 self.matchArr.remove(at: indexPath.row)
-                self.items.remove(at: row)
             } else {
-                self.items.remove(at: indexPath.row)
+                self.viewModel.items.remove(at: indexPath.row)
             }
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
