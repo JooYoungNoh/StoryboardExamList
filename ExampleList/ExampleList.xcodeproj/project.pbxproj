@@ -10,6 +10,7 @@
 		731F9CC22B05A4BF0062165B /* TablePracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F9CC12B05A4BF0062165B /* TablePracticeVC.swift */; };
 		731F9CC42B05A4E00062165B /* TablePracticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F9CC32B05A4E00062165B /* TablePracticeCell.swift */; };
 		731F9CC62B05DB110062165B /* TableDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F9CC52B05DB110062165B /* TableDetailVC.swift */; };
+		731F9CC82B05DC300062165B /* TableAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F9CC72B05DC300062165B /* TableAddVC.swift */; };
 		736227032B04A71000888A16 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736227022B04A71000888A16 /* FirstVC.swift */; };
 		736227052B04A71C00888A16 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736227042B04A71C00888A16 /* SecondVC.swift */; };
 		736227072B04A73000888A16 /* ThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736227062B04A73000888A16 /* ThirdVC.swift */; };
@@ -48,6 +49,7 @@
 		731F9CC12B05A4BF0062165B /* TablePracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePracticeVC.swift; sourceTree = "<group>"; };
 		731F9CC32B05A4E00062165B /* TablePracticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePracticeCell.swift; sourceTree = "<group>"; };
 		731F9CC52B05DB110062165B /* TableDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDetailVC.swift; sourceTree = "<group>"; };
+		731F9CC72B05DC300062165B /* TableAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableAddVC.swift; sourceTree = "<group>"; };
 		736227022B04A71000888A16 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		736227042B04A71C00888A16 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 		736227062B04A73000888A16 /* ThirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdVC.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				731F9CC12B05A4BF0062165B /* TablePracticeVC.swift */,
 				731F9CC32B05A4E00062165B /* TablePracticeCell.swift */,
 				731F9CC52B05DB110062165B /* TableDetailVC.swift */,
+				731F9CC72B05DC300062165B /* TableAddVC.swift */,
 			);
 			path = 2023_11_16;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				73F08EA72AFDFD9600A2D12C /* SceneDelegate.swift in Sources */,
 				7362270B2B04B03900888A16 /* CustomTabBar.swift in Sources */,
 				736227032B04A71000888A16 /* FirstVC.swift in Sources */,
+				731F9CC82B05DC300062165B /* TableAddVC.swift in Sources */,
 				736227152B04B7B400888A16 /* BearVM.swift in Sources */,
 				731F9CC22B05A4BF0062165B /* TablePracticeVC.swift in Sources */,
 				73823CC82B045BA9007E6A92 /* EventVC.swift in Sources */,

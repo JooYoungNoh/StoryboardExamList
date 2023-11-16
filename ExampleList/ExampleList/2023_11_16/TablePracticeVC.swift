@@ -21,7 +21,7 @@ class TablePracticeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.separatorStyle = .none
+        self.uiButtonCreate()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +40,23 @@ class TablePracticeVC: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+}
+
+extension TablePracticeVC {
+    @objc func buttonClick(_ sender: UIBarButtonItem) {
+        guard let addView = self.storyboard?.instantiateViewController(identifier: "TableAddVC") as? TableAddVC else { return }
+        addView.modalPresentationStyle = .fullScreen
+        
+        self.present(addView, animated: true)
+    }
+    
+    func uiButtonCreate() {
+        let addButton = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(buttonClick(_:)))
+        self.navigationItem.rightBarButtonItem = addButton
+        
+        self.tableView.separatorStyle = .none
     }
 }
 
