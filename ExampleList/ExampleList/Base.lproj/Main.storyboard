@@ -904,7 +904,7 @@
         <!--Table PracticeVC-->
         <scene sceneID="j1e-jP-L7f">
             <objects>
-                <viewController id="vUs-sq-f4w" customClass="TablePracticeVC" customModule="ExampleList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TablePracticeVC" id="vUs-sq-f4w" customClass="TablePracticeVC" customModule="ExampleList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hix-uL-7RK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -913,7 +913,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="114" id="f57-h3-r5c" customClass="TablePracticeCell" customModule="ExampleList" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TablePracticeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="114" id="f57-h3-r5c" customClass="TablePracticeCell" customModule="ExampleList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f57-h3-r5c" id="lGJ-TS-t7v">
@@ -933,6 +933,9 @@
                             <constraint firstItem="4ua-Oj-ZjA" firstAttribute="leading" secondItem="6LT-ee-hMX" secondAttribute="leading" id="ugp-2V-We1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="4ua-Oj-ZjA" id="5e5-yZ-whG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfH-WC-2gr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
