@@ -65,6 +65,12 @@ extension TablePracticeVC: UITableViewDataSource {
 }
 
 extension TablePracticeVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let nextView = self.storyboard?.instantiateViewController(identifier: "TableDetailVC") as? TableDetailVC else { return }
+        
+        self.navigationController?.pushViewController(nextView, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             self.items.remove(at: indexPath.row)

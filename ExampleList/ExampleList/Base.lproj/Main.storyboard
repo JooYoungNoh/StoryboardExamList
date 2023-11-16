@@ -972,6 +972,21 @@
             </objects>
             <point key="canvasLocation" x="1939.6946564885495" y="1264.7887323943662"/>
         </scene>
+        <!--Table DetailVC-->
+        <scene sceneID="ZSx-Rl-i4g">
+            <objects>
+                <viewController storyboardIdentifier="TableDetailVC" id="zc4-lF-coe" customClass="TableDetailVC" customModule="ExampleList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SB8-2N-nm6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="POe-FH-1CD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNt-0A-FGR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2708" y="1265"/>
+        </scene>
         <!--Tab PracticeVC-->
         <scene sceneID="o8c-2L-7FN">
             <objects>
