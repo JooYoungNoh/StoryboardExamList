@@ -26,7 +26,7 @@ class TablePracticeVC: UIViewController {
         let isSearchBarHasText = searchController?.searchBar.text?.isEmpty == false
         return isActive && isSearchBarHasText
     }
-    var matchArr: [TablePracticeModel] = []
+    var matchArr: [Int] = []
     var searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
@@ -73,9 +73,12 @@ extension TablePracticeVC {
 extension TablePracticeVC: UISearchBarDelegate, UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else { return }
-        self.matchArr = self.items.filter( { (list: TablePracticeModel) -> Bool in
-            return list.attractionNames.lowercased().contains(text.lowercased())
-        })
+        self.matchArr.removeAll()
+        for index in 0..<self.items.count {
+            if self.items[index].attractionNames.lowercased().contains(text.lowercased()) {
+                self.matchArr.append(index)
+            }
+        }
         self.tableView.reloadData()
     }
 }
@@ -108,8 +111,8 @@ extension TablePracticeVC: UITableViewDataSource {
         cell.profileImageView.layer.cornerRadius = 20
         
         if self.searching {
-            cell.nameLabel.text = self.matchArr[indexPath.row].attractionNames
-            cell.profileImageView.image = UIImage(named: self.matchArr[indexPath.row].attractionImages)
+            cell.nameLabel.text = self.items[self.matchArr[indexPath.row]].attractionNames
+            cell.profileImageView.image = UIImage(named: self.items[self.matchArr[indexPath.row]].attractionImages)
         } else {
             cell.nameLabel.text = self.items[indexPath.row].attractionNames
             cell.profileImageView.image = UIImage(named: self.items[indexPath.row].attractionImages)
@@ -131,14 +134,36 @@ extension TablePracticeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let nextView = self.storyboard?.instantiateViewController(identifier: "TableDetailVC") as? TableDetailVC else { return }
         
-        nextView.webSite = self.searching ? self.matchArr[indexPath.row].webAddresses : self.items[indexPath.row].webAddresses
+        nextView.webSite = self.searching ? self.items[self.matchArr[indexPath.row]].webAddresses : self.items[indexPath.row].webAddresses
         
         self.navigationController?.pushViewController(nextView, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        /*
+         if isSearching {
+                         self.matchesArray.remove(at: row)
+                         self.attractionNames.remove(at: matchesArray[row])
+                         self.attractionImages.remove(at: matchesArray[row])
+                         self.webAddresses.remove(at: matchesArray[row])
+                         self.updateSearchResults(for: searchController)
+                     } else {
+                         self.attractionNames.remove(at: row)
+                         self.attractionImages.remove(at: row)
+                         self.webAddresses.remove(at: row)
+                     }
+                     
+                     tableView.deleteRows(at: [indexPath], with: .fade)
+         */
+        
         if editingStyle == .delete {
-            self.items.remove(at: indexPath.row)
+            if self.searching {
+                let row = self.matchArr[indexPath.row]
+                self.matchArr.remove(at: indexPath.row)
+                self.items.remove(at: row)
+            } else {
+                self.items.remove(at: indexPath.row)
+            }
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
