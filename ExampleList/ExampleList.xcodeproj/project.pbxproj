@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		731F9CC22B05A4BF0062165B /* TablePracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F9CC12B05A4BF0062165B /* TablePracticeVC.swift */; };
+		731F9CC42B05A4E00062165B /* TablePracticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731F9CC32B05A4E00062165B /* TablePracticeCell.swift */; };
 		736227032B04A71000888A16 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736227022B04A71000888A16 /* FirstVC.swift */; };
 		736227052B04A71C00888A16 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736227042B04A71C00888A16 /* SecondVC.swift */; };
 		736227072B04A73000888A16 /* ThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736227062B04A73000888A16 /* ThirdVC.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		731F9CC12B05A4BF0062165B /* TablePracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePracticeVC.swift; sourceTree = "<group>"; };
+		731F9CC32B05A4E00062165B /* TablePracticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePracticeCell.swift; sourceTree = "<group>"; };
 		736227022B04A71000888A16 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		736227042B04A71C00888A16 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 		736227062B04A73000888A16 /* ThirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdVC.swift; sourceTree = "<group>"; };
@@ -89,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		731F9CC02B05A4910062165B /* 2023_11_16 */ = {
+			isa = PBXGroup;
+			children = (
+				731F9CC12B05A4BF0062165B /* TablePracticeVC.swift */,
+				731F9CC32B05A4E00062165B /* TablePracticeCell.swift */,
+			);
+			path = 2023_11_16;
+			sourceTree = "<group>";
+		};
 		73823CC62B045B85007E6A92 /* 2023_11_15 */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +162,7 @@
 				73A1F9672B01DD3F00D82CB8 /* 2023_11_13 */,
 				73FB30A12B03131C0069837B /* 2023_11_14 */,
 				73823CC62B045B85007E6A92 /* 2023_11_15 */,
+				731F9CC02B05A4910062165B /* 2023_11_16 */,
 				73F08EAA2AFDFD9600A2D12C /* Main.storyboard */,
 				73823CCF2B0499D0007E6A92 /* SubEvent.storyboard */,
 				73823CD22B049B67007E6A92 /* SubEventTwo.storyboard */,
@@ -259,6 +273,7 @@
 				73A1F96B2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift in Sources */,
 				736227072B04A73000888A16 /* ThirdVC.swift in Sources */,
 				736227112B04B1D300888A16 /* ShowVC.swift in Sources */,
+				731F9CC42B05A4E00062165B /* TablePracticeCell.swift in Sources */,
 				73823CCA2B04815B007E6A92 /* EventTwoVC.swift in Sources */,
 				73823CCE2B049940007E6A92 /* EventFourVC.swift in Sources */,
 				736227052B04A71C00888A16 /* SecondVC.swift in Sources */,
@@ -277,6 +292,7 @@
 				7362270B2B04B03900888A16 /* CustomTabBar.swift in Sources */,
 				736227032B04A71000888A16 /* FirstVC.swift in Sources */,
 				736227152B04B7B400888A16 /* BearVM.swift in Sources */,
+				731F9CC22B05A4BF0062165B /* TablePracticeVC.swift in Sources */,
 				73823CC82B045BA9007E6A92 /* EventVC.swift in Sources */,
 				73A1F9762B02072D00D82CB8 /* AutoLayoutFiveVC.swift in Sources */,
 				73823CCC2B04982F007E6A92 /* EventThreeVC.swift in Sources */,

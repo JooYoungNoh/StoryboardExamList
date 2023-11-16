@@ -650,7 +650,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2a-TO-NxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="1449"/>
+            <point key="canvasLocation" x="-900" y="1460"/>
         </scene>
         <!--EventVC-->
         <scene sceneID="4fb-aE-wQb">
@@ -864,7 +864,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cp-Jk-BAo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039" y="1449"/>
+            <point key="canvasLocation" x="111" y="1460"/>
         </scene>
         <!--Item-->
         <scene sceneID="NYz-RL-vJj">
@@ -899,7 +899,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lY-l6-YyS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2010" y="1449"/>
+            <point key="canvasLocation" x="912" y="1460"/>
+        </scene>
+        <!--Table PracticeVC-->
+        <scene sceneID="j1e-jP-L7f">
+            <objects>
+                <viewController id="vUs-sq-f4w" customClass="TablePracticeVC" customModule="ExampleList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hix-uL-7RK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4ua-Oj-ZjA">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="114" id="f57-h3-r5c" customClass="TablePracticeCell" customModule="ExampleList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="114"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f57-h3-r5c" id="lGJ-TS-t7v">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="114"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6LT-ee-hMX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4ua-Oj-ZjA" firstAttribute="top" secondItem="6LT-ee-hMX" secondAttribute="top" id="4Lj-4j-0HJ"/>
+                            <constraint firstItem="6LT-ee-hMX" firstAttribute="bottom" secondItem="4ua-Oj-ZjA" secondAttribute="bottom" id="9bS-UN-NQl"/>
+                            <constraint firstItem="6LT-ee-hMX" firstAttribute="trailing" secondItem="4ua-Oj-ZjA" secondAttribute="trailing" id="mKJ-6D-rAg"/>
+                            <constraint firstItem="4ua-Oj-ZjA" firstAttribute="leading" secondItem="6LT-ee-hMX" secondAttribute="leading" id="ugp-2V-We1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MfH-WC-2gr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1939.6946564885495" y="1265.4929577464789"/>
         </scene>
         <!--Tab PracticeVC-->
         <scene sceneID="o8c-2L-7FN">
@@ -907,6 +944,7 @@
                 <tabBarController storyboardIdentifier="TabPracticeVC" automaticallyAdjustsScrollViewInsets="NO" id="ECd-O9-Rkc" customClass="TabPracticeVC" customModule="ExampleList" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="b2Z-KN-mRv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -918,7 +956,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="im5-CA-se7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039" y="732"/>
+            <point key="canvasLocation" x="112" y="737"/>
         </scene>
     </scenes>
     <resources>
