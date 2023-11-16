@@ -47,7 +47,8 @@ class TablePracticeVC: UIViewController {
 extension TablePracticeVC {
     @objc func buttonClick(_ sender: UIBarButtonItem) {
         guard let addView = self.storyboard?.instantiateViewController(identifier: "TableAddVC") as? TableAddVC else { return }
-        addView.modalPresentationStyle = .fullScreen
+        addView.modalPresentationStyle = .overCurrentContext
+        addView.modalTransitionStyle = .crossDissolve
         
         self.present(addView, animated: true)
     }
