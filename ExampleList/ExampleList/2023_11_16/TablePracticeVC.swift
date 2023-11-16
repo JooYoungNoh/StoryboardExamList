@@ -85,6 +85,8 @@ extension TablePracticeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let nextView = self.storyboard?.instantiateViewController(identifier: "TableDetailVC") as? TableDetailVC else { return }
         
+        nextView.webSite = self.items[indexPath.row].webAddresses
+        
         self.navigationController?.pushViewController(nextView, animated: true)
     }
     
