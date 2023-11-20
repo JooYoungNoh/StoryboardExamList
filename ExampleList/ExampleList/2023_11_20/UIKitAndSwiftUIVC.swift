@@ -17,6 +17,11 @@ class UIKitAndSwiftUIVC: UIViewController {
         self.uiCreate()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     func uiCreate() {
         self.navigationController?.navigationBar.isHidden = true
         
