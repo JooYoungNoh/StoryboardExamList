@@ -6,24 +6,27 @@
 //
 
 import UIKit
+import SwiftUI
+import SnapKit
 
 class UIKitAndSwiftUIVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.uiCreate()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func uiCreate() {
+        self.navigationController?.navigationBar.isHidden = true
+        
+        let swiftUIVC = UIHostingController(rootView: GridRowView())
+        
+        self.addChild(swiftUIVC)
+        self.view.addSubview(swiftUIVC.view)
+        
+        swiftUIVC.view.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview()
+        }
     }
-    */
-
 }
