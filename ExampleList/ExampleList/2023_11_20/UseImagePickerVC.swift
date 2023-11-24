@@ -39,10 +39,46 @@ extension UseImagePickerVC {
     }
     
     @IBAction func useCameraRoll(_ sender: UIBarButtonItem) {
-        
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+            let imagePicker = UIImagePickerController()
+            
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.mediaTypes = [UTType.image.identifier]
+            imagePicker.allowsEditing = false
+            
+            self.present(imagePicker, animated: true)
+            
+            self.newMeida = false
+        }
+    }
+    
+    @objc func didFinishError(image: UIImage, didFinishError error: NSErrorPointer, centextInfo: UnsafeRawPointer) {
+        if error != nil {
+            
+        } else {
+            print(error.debugDescription.localizedLowercase)
+        }
     }
 }
 
 extension UseImagePickerVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+    //이미지 선택하면 호출될 메소드
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let mediaType = info[.mediaType] as! NSString
+        //let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+        
+        if mediaType.isEqual(to: UTType.image.identifier) {
+            let img = info[.originalImage] as! UIImage
+            
+            self.imageView.image = img
+            
+            if newMeida {
+                UIImageWriteToSavedPhotosAlbum(img, self, #selector(UseImagePickerVC.didFinishError(image:didFinishError:centextInfo:)), nil)
+            }
+        }
+        //이미지 피커 컨트롤창 닫기
+        picker.dismiss(animated: true)
+    }
 }
