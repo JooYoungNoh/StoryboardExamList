@@ -916,6 +916,21 @@
             </objects>
             <point key="canvasLocation" x="1937" y="1993"/>
         </scene>
+        <!--Use Image PickerVC-->
+        <scene sceneID="W3P-05-RKi">
+            <objects>
+                <viewController storyboardIdentifier="UseImagePickerVC" id="hjO-OC-6va" customClass="UseImagePickerVC" customModule="ExampleList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jOD-nN-BCr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bCS-LT-kKe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AmZ-DF-Xna" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="2755"/>
+        </scene>
         <!--Table PracticeVC-->
         <scene sceneID="j1e-jP-L7f">
             <objects>

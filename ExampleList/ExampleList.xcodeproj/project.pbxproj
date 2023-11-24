@@ -26,6 +26,7 @@
 		73823CCE2B049940007E6A92 /* EventFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73823CCD2B049940007E6A92 /* EventFourVC.swift */; };
 		73823CD12B0499D0007E6A92 /* SubEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73823CCF2B0499D0007E6A92 /* SubEvent.storyboard */; };
 		73823CD32B049B67007E6A92 /* SubEventTwo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73823CD22B049B67007E6A92 /* SubEventTwo.storyboard */; };
+		738660B32B10653500690D9A /* UseImagePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738660B22B10653500690D9A /* UseImagePickerVC.swift */; };
 		73A1F9692B01DDE600D82CB8 /* AutoLayoutOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1F9682B01DDE600D82CB8 /* AutoLayoutOneVC.swift */; };
 		73A1F96B2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1F96A2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift */; };
 		73A1F96D2B01DE4F00D82CB8 /* AutoLayoutThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1F96C2B01DE4F00D82CB8 /* AutoLayoutThreeVC.swift */; };
@@ -67,6 +68,7 @@
 		73823CCD2B049940007E6A92 /* EventFourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFourVC.swift; sourceTree = "<group>"; };
 		73823CD02B0499D0007E6A92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SubEvent.storyboard; sourceTree = "<group>"; };
 		73823CD22B049B67007E6A92 /* SubEventTwo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SubEventTwo.storyboard; sourceTree = "<group>"; };
+		738660B22B10653500690D9A /* UseImagePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseImagePickerVC.swift; sourceTree = "<group>"; };
 		73A1F9682B01DDE600D82CB8 /* AutoLayoutOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutOneVC.swift; sourceTree = "<group>"; };
 		73A1F96A2B01DE0200D82CB8 /* AutoLayoutTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutTwoVC.swift; sourceTree = "<group>"; };
 		73A1F96C2B01DE4F00D82CB8 /* AutoLayoutThreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayoutThreeVC.swift; sourceTree = "<group>"; };
@@ -132,6 +134,15 @@
 			path = 2023_11_15;
 			sourceTree = "<group>";
 		};
+		738660B12B1064EE00690D9A /* 2023_11_24 */ = {
+			isa = PBXGroup;
+			children = (
+				738660B22B10653500690D9A /* UseImagePickerVC.swift */,
+			);
+			name = 2023_11_24;
+			path = 2023_11_20;
+			sourceTree = "<group>";
+		};
 		73A1F9672B01DD3F00D82CB8 /* 2023_11_13 */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +194,7 @@
 				73823CC62B045B85007E6A92 /* 2023_11_15 */,
 				731F9CC02B05A4910062165B /* 2023_11_16 */,
 				73B7EFE22B0AFA48000F867B /* 2023_11_20 */,
+				738660B12B1064EE00690D9A /* 2023_11_24 */,
 				73F08EAA2AFDFD9600A2D12C /* Main.storyboard */,
 				73823CCF2B0499D0007E6A92 /* SubEvent.storyboard */,
 				73823CD22B049B67007E6A92 /* SubEventTwo.storyboard */,
@@ -313,6 +325,7 @@
 				73F08EA72AFDFD9600A2D12C /* SceneDelegate.swift in Sources */,
 				7362270B2B04B03900888A16 /* CustomTabBar.swift in Sources */,
 				736227032B04A71000888A16 /* FirstVC.swift in Sources */,
+				738660B32B10653500690D9A /* UseImagePickerVC.swift in Sources */,
 				731F9CC82B05DC300062165B /* TableAddVC.swift in Sources */,
 				736227152B04B7B400888A16 /* BearVM.swift in Sources */,
 				731F9CC22B05A4BF0062165B /* TablePracticeVC.swift in Sources */,
