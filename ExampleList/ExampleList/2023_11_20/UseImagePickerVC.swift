@@ -8,6 +8,8 @@
 import UIKit
 import MobileCoreServices
 import UniformTypeIdentifiers
+import AVKit
+import AVFoundation
 
 class UseImagePickerVC: UIViewController {
 
@@ -80,5 +82,16 @@ extension UseImagePickerVC: UIImagePickerControllerDelegate, UINavigationControl
         }
         //이미지 피커 컨트롤창 닫기
         picker.dismiss(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! AVPlayerViewController
+        
+        let url = URL(string: "https://i.namu.wiki/i/f4Dnxg6yv0VUXjiV6fQZAdx5Ii62f3nxYu3jT-r8M-JfvbYmb5dROGQ9AzYW2g4Uf2DS1vf1tcxZP5n40acOiQ.mp4")
+        
+        if let movieURL = url {
+            dest.player = AVPlayer(url: movieURL)
+            dest.player?.play()
+        }
     }
 }
