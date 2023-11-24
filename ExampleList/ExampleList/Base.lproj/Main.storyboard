@@ -923,9 +923,41 @@
                     <view key="view" contentMode="scaleToFill" id="jOD-nN-BCr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eVP-cm-0EG">
+                                <rect key="frame" x="16" y="75" width="361" height="686"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAS-z6-A2N">
+                                <rect key="frame" x="0.0" y="777" width="393" height="49"/>
+                                <items>
+                                    <barButtonItem title="Camera" id="lqy-bT-zxR">
+                                        <connections>
+                                            <action selector="useCamera:" destination="hjO-OC-6va" id="qqq-9q-OMw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="CameraRoll" id="IwJ-6u-igt">
+                                        <connections>
+                                            <action selector="useCameraRoll:" destination="hjO-OC-6va" id="9O4-Ho-Bkw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bCS-LT-kKe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UAS-z6-A2N" firstAttribute="bottom" secondItem="bCS-LT-kKe" secondAttribute="bottom" constant="8" id="APd-Wn-RxS"/>
+                            <constraint firstItem="UAS-z6-A2N" firstAttribute="top" secondItem="eVP-cm-0EG" secondAttribute="bottom" constant="16" id="BXh-Qw-lxp"/>
+                            <constraint firstItem="UAS-z6-A2N" firstAttribute="leading" secondItem="bCS-LT-kKe" secondAttribute="leading" id="JS1-ki-XfC"/>
+                            <constraint firstItem="bCS-LT-kKe" firstAttribute="trailing" secondItem="eVP-cm-0EG" secondAttribute="trailing" constant="16" id="MHd-Z3-7TP"/>
+                            <constraint firstItem="eVP-cm-0EG" firstAttribute="leading" secondItem="bCS-LT-kKe" secondAttribute="leading" constant="16" id="MvN-jb-lAF"/>
+                            <constraint firstItem="UAS-z6-A2N" firstAttribute="trailing" secondItem="bCS-LT-kKe" secondAttribute="trailing" id="fU8-Gy-GSg"/>
+                            <constraint firstItem="eVP-cm-0EG" firstAttribute="top" secondItem="bCS-LT-kKe" secondAttribute="top" constant="16" id="y1e-Cj-Lgm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="eVP-cm-0EG" id="ULz-us-KZd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AmZ-DF-Xna" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
