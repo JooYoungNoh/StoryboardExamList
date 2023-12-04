@@ -21,5 +21,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>kTCCServiceMediaLibrary</key>
+	<string>앱에서 음성 인식을 사용하기 위해 마이크에 접근해야 합니다.</string>
 </dict>
 </plist>

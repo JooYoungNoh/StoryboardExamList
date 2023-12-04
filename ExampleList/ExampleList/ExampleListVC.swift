@@ -11,7 +11,7 @@ class ExampleListVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var examList: [String] = ["InteractionExamVC", "AutoLayoutOneVC", "AutoLayoutTwoVC", "AutoLayoutThreeVC", "AutoLayoutFourVC", "AutoLayoutFiveVC", "AutoLayoutSixVC", "CrossVC", "EventVC", "TabPracticeVC", "CustomTabBar", "TablePracticeVC", "UIKitAndSwiftUIVC", "UseImagePickerVC", "LiveSpeachVC"]
+    private var examList: [String] = ["InteractionExamVC", "AutoLayoutOneVC", "AutoLayoutTwoVC", "AutoLayoutThreeVC", "AutoLayoutFourVC", "AutoLayoutFiveVC", "AutoLayoutSixVC", "CrossVC", "EventVC", "TabPracticeVC", "CustomTabBar", "TablePracticeVC", "UIKitAndSwiftUIVC", "UseImagePickerVC", "LiveSpeechVC"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
